@@ -1,5 +1,5 @@
 package br.edu.iffarroupilha.bolicho.controle;
-import br.edu.iffarroupilha.bolicho.modelo.Cliente;
+//import br.edu.iffarroupilha.bolicho.modelo.Cliente;
 
 
 /**
@@ -11,7 +11,7 @@ public class ClienteControle extends AControle {
 
 	/**
 	 * <p>
-	 * Valida se os dados do cliente est√£o corretos
+	 * Valida se os dados do cliente est„o corretos
 	 * </p>
 	 */
 	public String validarCliente(Cliente cli) {
@@ -23,7 +23,7 @@ public class ClienteControle extends AControle {
 			}
 			
 		}else{
-			return "Dados do cliente n√£o informado!";
+			return "Dados do cliente n„o informado!";
 		}
 		return null;
 	}

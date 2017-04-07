@@ -2,9 +2,15 @@ package br.edu.iffarroupilha.bolicho.modelo;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class Venda {
-
+	@Id
+	@Column(nullable = false)
 	private int idVenda;
+	@Column(length = 40, nullable = false)
 	private Cliente cliente;
 	private Date data;
 
@@ -22,14 +28,6 @@ public class Venda {
 
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
-	}
-
-	public Date getData() {
-		return data;
-	}
-
-	public void setData(Date data) {
-		this.data = data;
-	}
-
-}
+	}}
+	
+	

@@ -1,7 +1,14 @@
 package br.edu.iffarroupilha.bolicho.modelo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class Produto {
+	@Id
+	@Column(nullable = false)
 	private int idProduto;
+	@Column(length = 40, nullable = false)
 	private String descricao;
 	private double preco;
 

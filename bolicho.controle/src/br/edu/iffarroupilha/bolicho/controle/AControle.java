@@ -3,6 +3,7 @@ package br.edu.iffarroupilha.bolicho.controle;
 import java.util.List;
 
 import org.hibernate.Hibernate;
+import org.hibernate.Session;
 import org.hibernate.Session.*;
 
 /**
@@ -12,15 +13,19 @@ import org.hibernate.Session.*;
  * </p>
  */
 public abstract class AControle {
-	// gravar ou atualizar uma informaÃ§Ã£o
+	// gravar ou atualizar uma informação
 	// em banco
 	public void gravar(Object entidade) {
+		// estabele a conexao
 		Session sessao = HibernateDAO.getSessao();
+		// abre uma transacao
 		sessao.getTransaction().begin();
+		// salva no banco
 		sessao.saveOrUpdate(entidade);
+		// comita as alterações
 		sessao.getTransaction().commit();
 		
-
+		
 	}
 
 	// busca todos os registros de uma

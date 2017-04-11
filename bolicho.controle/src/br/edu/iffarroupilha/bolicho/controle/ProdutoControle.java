@@ -9,25 +9,27 @@ import br.edu.iffarroupilha.bolicho.modelo.Produto;
  * </p>
  **/
 
-public class ProdutoControle extends AControle {
-
+public class ProdutoControle extends AControle{
+	
 	/**
 	 * <p>
-	 * Valida se os dados do produto est√£o corretos
+	 * Valida se os dados do cliente est„o corretos
 	 * </p>
+	 * @param cli
+	 * @return
 	 */
-	public String validarProduto(Produto p) {
-		if (p != null) {
-			if (p.getPreco() == 0) {
-				return "Informe o preco";
-			} else if (p.getDescricao() == null || p.getDescricao().isEmpty()) {
-				return "Por favor, informe a descri√ß√£o do produto";
+	public String validarProduto(Produto Pre){
+		if (Pre != null) {
+			if (Pre.getPreco() == 0) {
+				return "Informe o preÁo";
+			} else if(Pre.getDescricao() == null || Pre.getDescricao().isEmpty()){
+				return "Por favor, informe uma descriÁ„o ao produto";
 			}
-
 		} else {
-			return "Dados do produto n√£o informado!";
+			return "Dados do produto n„o informado!";
 		}
 		return null;
 	}
+
 
 }

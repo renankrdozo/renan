@@ -12,47 +12,43 @@ import org.hibernate.Session.*;
  * buscar etc
  * </p>
  */
-public abstract class AControle {
-	// gravar ou atualizar uma informação
-	// em banco
-	public void gravar(Object entidade) {
-		// estabele a conexao
-		Session sessao = HibernateDAO.getSessao();
-		// abre uma transacao
+public abstract class AControle{
+	//gravar ou atualizar uma informação em banco
+	public void gravar(Object entidade){
+		
+		// estabelece a conexao
+		Session sessao = HibernateDao.getSessao();
+		// abre uma transação
 		sessao.getTransaction().begin();
-		// salva no banco
 		sessao.saveOrUpdate(entidade);
-		// comita as alterações
 		sessao.getTransaction().commit();
 		
-		
 	}
-
-	// busca todos os registros de uma
-	// determinada entidade (classe)
-	public List buscarTodos(Class classe) {
+	//busca todos os registros de uma determinada entidade(classe)
+	public List buscarTodos(Class classe){
 		return null;
 	}
-
-	// excluir entidades
-	public void excluir(Object entidade) {
-
+	//excluir entidades
+	public void excluir(Object entidade){
+		
 	}
-
+	
 	/**
 	 * <p>
-	 * Converte um termo em numero, caso esteja em formato invpalido retorna-se
-	 * zero
+	 * Converte um termo em numero, caso esteja em formato invalido retorna-se zero
 	 * </p>
+	 * @param termo
+	 * @return
 	 */
-	public int converteInteiro(String termo) {
+	public int converteInteiro(String termo){
 		try {
 			return Integer.parseInt(termo);
 		} catch (Exception e) {
 			return 0;
 		}
+		
 	}
-
+	
 	/**
 	 * <p>
 	 * Converte um termo em numero com casas decimais,
@@ -60,12 +56,12 @@ public abstract class AControle {
 	 * zero
 	 * </p>
 	 */
-	public float converteFlutuante(String termo) {
+	public float converteFlutuante(String termo){
 		try {
 			return Float.parseFloat(termo);
 		} catch (Exception e) {
 			return 0;
 		}
+		
 	}
-
 }

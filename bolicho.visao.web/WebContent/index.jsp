@@ -10,9 +10,9 @@
 <body>
      <div class="panel panel-default">
        <div class="panel-body"> 
-		   <h1>Seja bem vindo ao Bolicho!!</h1>
-		   <a href="cliente/listar" class="btn btn-primary"  >
-		     Clientes <span class="glyphicon glyphicon-user"></span> 
+		   <h1>Seja bem vindo ao Alunos !!</h1>
+		   <a href="aluno/listar" class="btn btn-primary"  >
+		     Alunos <span class="glyphicon glyphicon-user"></span> 
 		   </a>
 	   </div>
 	 </div>

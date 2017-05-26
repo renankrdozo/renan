@@ -4,6 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import br.edu.iffarroupilha.bolicho.modelo.Aluno;
 import br.edu.iffarroupilha.bolicho.modelo.Cliente;
 
 public class HibernateDAO {
@@ -15,7 +16,7 @@ public class HibernateDAO {
 		Configuration cfg = new Configuration();
 		// depois adicionar as demais entidades
 		// apos ter feito o mapeamento
-		cfg.addAnnotatedClass(Cliente.class );
+		cfg.addAnnotatedClass(Aluno.class );
 		cfg.configure();
 		// forma mais facil de criar uma fabri
 		fabrica = cfg.buildSessionFactory();

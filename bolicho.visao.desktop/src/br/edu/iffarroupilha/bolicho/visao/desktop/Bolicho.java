@@ -22,7 +22,7 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 public class Bolicho extends JFrame {
 
 	public Bolicho() {
-		setTitle(":: Bolicho ::");
+		setTitle(":: Escola ::");
 		setSize(640, 480);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -45,18 +45,18 @@ public class Bolicho extends JFrame {
 		JMenu cadastro = new JMenu("Cadastros");
 		menu.add(cadastro);
 		// cria os sub itens
-		JMenuItem cliente = new JMenuItem("Clientes");
+		JMenuItem Aluno = new JMenuItem("Alunos");
 		JMenuItem produto = new JMenuItem("Produtos");
 		JMenuItem venda = new JMenuItem("Vendas");
 		// vincula ao menu cadastros
-		cadastro.add(cliente);
+		cadastro.add(Aluno);
 		cadastro.add(produto);
 		cadastro.add(venda);
 		// vincula as ações aos itens
-		cliente.addActionListener(new ActionListener() {
+		Aluno.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				new FrmCliente(Bolicho.this);
+				new frmAluno(Bolicho.this);
 			}
 		});
 

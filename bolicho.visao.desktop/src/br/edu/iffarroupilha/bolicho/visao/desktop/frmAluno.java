@@ -18,7 +18,7 @@ public class frmAluno extends JFrame{
 
 	/**
 	 * <p>
-	 * Classe que representa a view para gerir clientes
+	 * Classe que representa a view para gerir Alunos
 	 * </p>
 	 * 
 	 * @author fernando

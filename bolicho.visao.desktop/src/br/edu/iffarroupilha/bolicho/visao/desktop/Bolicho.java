@@ -46,12 +46,12 @@ public class Bolicho extends JFrame {
 		menu.add(cadastro);
 		// cria os sub itens
 		JMenuItem Aluno = new JMenuItem("Alunos");
-		JMenuItem produto = new JMenuItem("Produtos");
-		JMenuItem venda = new JMenuItem("Vendas");
+		//JMenuItem produto = new JMenuItem("Produtos");
+		//JMenuItem venda = new JMenuItem("Vendas");
 		// vincula ao menu cadastros
 		cadastro.add(Aluno);
-		cadastro.add(produto);
-		cadastro.add(venda);
+		//cadastro.add(produto);
+		//cadastro.add(venda);
 		// vincula as ações aos itens
 		Aluno.addActionListener(new ActionListener() {
 
@@ -60,7 +60,7 @@ public class Bolicho extends JFrame {
 			}
 		});
 
-		produto.addActionListener(new ActionListener() {
+		/*produto.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
 				new FrmProduto( Bolicho.this  );
@@ -72,7 +72,7 @@ public class Bolicho extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(Bolicho.this, "Voce clicou!!! ");
 			}
-		});
+		});*/
 
 		// adiciona o menu em tela
 		setJMenuBar(menu);

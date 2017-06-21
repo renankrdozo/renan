@@ -3,7 +3,7 @@ package br.edu.iffarroupilha.bolicho.controle;
 import br.edu.iffarroupilha.bolicho.modelo.Aluno;
 import br.edu.iffarroupilha.bolicho.modelo.Cliente;
 
-public class AlunoControle {
+public class AlunoControle  extends AControle {
 	public String validarAluno(Aluno cli) {
 		if (cli != null) {
 			if( cli.getmatricula() == 0 ){
@@ -13,7 +13,7 @@ public class AlunoControle {
 			}
 			
 		}else{
-			return "Dados do cliente n√£o informado!";
+			return "Dados do Aluno n„o informado!";
 		}
 		return null;
 	}
